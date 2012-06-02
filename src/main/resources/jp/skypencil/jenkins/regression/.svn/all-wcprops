@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/JenkinsRegressionReportPlugin/!svn/ver/3/trunk/src/main/resources/jp/co/worksap/jenkins/regression
+END
+Messages.properties
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/JenkinsRegressionReportPlugin/!svn/ver/2/trunk/src/main/resources/jp/co/worksap/jenkins/regression/Messages.properties
+END
+Messages_ja.properties
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/JenkinsRegressionReportPlugin/!svn/ver/2/trunk/src/main/resources/jp/co/worksap/jenkins/regression/Messages_ja.properties
+END

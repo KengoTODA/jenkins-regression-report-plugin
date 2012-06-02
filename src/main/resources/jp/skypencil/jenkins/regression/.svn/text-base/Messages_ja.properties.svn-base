@@ -1,0 +1,2 @@
+RegressionReportNotifier.DisplayName=\u30ec\u30b0\u30ec\u30c3\u30b7\u30e7\u30f3\u3057\u305f\u5358\u4f53\u30c6\u30b9\u30c8\u3092\u5831\u544a\u3059\u308b
+RegressionReportNotifier.MailSubject=[regression reporter]regression occured
