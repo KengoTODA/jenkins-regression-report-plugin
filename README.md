@@ -1,6 +1,6 @@
 Jenkins regression report plugin
 ================================
-This plugin sends a mail if your test cases found regressions.
+This plugin sends a mail if your test cases find regressions.
 
 ![built and tested on DEV@cloud](http://static-www.cloudbees.com/images/badges/BuiltOnDEV.png)
 
