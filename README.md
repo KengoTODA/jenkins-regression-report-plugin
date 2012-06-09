@@ -7,9 +7,15 @@ This plugin sends a mail if your test cases find regressions.
 
 Scenario
 --------
- * There a lot of failures in your build.
- * You have to find regression (new failure) but it's little difficult.
- * So picking up regression automatically is helpful you to enhance quality.
+ * Importing CI into running project
+   * Sometimes project have a lot of red tests
+   * In this situation, finding regression (new red test cases) is little difficult
+   * This plugin helps you to find them
+
+Screen shot
+-----------
+![screen shot of configure](https://raw.github.com/eller86/jenkins-regression-report-plugin/master/screenshot.png)
+
 
 copyright and license
 ---------------------
