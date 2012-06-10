@@ -23,9 +23,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<scm>
-		<connection>scm:git://github.com/eller86/jenkins-regression-report-plugin.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com/eller86/jenkins-regression-report-plugin.git</developerConnection>
-		<url>https://github.com/eller86/jenkins-regression-report-plugin</url>
+		<connection>scm:git://github.com/jenkinsci/regression-report-plugin.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/jenkinsci/regression-report-plugin.git</developerConnection>
+		<url>https://github.com/jenkinsci/regression-report-plugin</url>
 	</scm>
 	<developers>
 		<developer>

@@ -14,7 +14,7 @@ Scenario
 
 Screen shot
 -----------
-![screen shot of configure](https://raw.github.com/eller86/jenkins-regression-report-plugin/master/screenshot.png)
+![screen shot of configure](https://raw.github.com/jenkinsci/regression-report-plugin/master/screenshot.png)
 
 
 copyright and license
