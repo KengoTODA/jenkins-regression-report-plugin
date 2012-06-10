@@ -11,6 +11,7 @@
 	<name>Regression Report Plugin</name>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>hpi</packaging>
+	<url>http://wiki.jenkins-ci.org/display/JENKINS/Regression+Report+Plugin</url>
 
 	<licenses>
 		<license><!-- Jenkins community recommends to use MIT. see https://wiki.jenkins-ci.org/display/JENKINS/Copyright+on+source+code -->
