@@ -14,9 +14,9 @@
 	<packaging>hpi</packaging>
 
 	<licenses>
-		<license>
-			<name>Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+		<license><!-- Jenkins community recommends to use MIT. see https://wiki.jenkins-ci.org/display/JENKINS/Copyright+on+source+code -->
+			<name>The MIT license</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
 		</license>
 	</licenses>
 
