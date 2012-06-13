@@ -37,6 +37,10 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
+/**
+ * @version 1.0
+ * @author eller86 (Kengo TODA)
+ */
 public final class RegressionReportNotifier extends Notifier {
 	private static final int MAX_RESULTS_PER_MAIL = 20;
 	private final String recipients;
@@ -111,9 +115,9 @@ public final class RegressionReportNotifier extends Notifier {
 		builder.append(Util.encode(Jenkins.getInstance().getRootUrl()));
 		builder.append(Util.encode(build.getUrl()));
 		builder.append("\n\n");
-		builder.append(regressions.size() + " regressions found.");	// TODO Is this right way to use the word "regressions"?
+		builder.append(regressions.size() + " regressions found.");
 		builder.append("\n");
-		for (int i = 0, max = Math.min(regressions.size(), MAX_RESULTS_PER_MAIL); i < max; ++i) {	// save heap to avoid OOME.
+		for (int i = 0, max = Math.min(regressions.size(), MAX_RESULTS_PER_MAIL); i < max; ++i) {	// to save heap to avoid OOME.
 			CaseResult result = regressions.get(i);
 			builder.append("  ");
 			builder.append(result.getFullName());
