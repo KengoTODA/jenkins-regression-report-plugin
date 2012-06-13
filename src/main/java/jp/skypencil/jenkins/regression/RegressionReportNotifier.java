@@ -66,7 +66,7 @@ public final class RegressionReportNotifier extends Notifier {
 
 		AbstractTestResultAction<?> testResultAction = build.getTestResultAction();
 		if (testResultAction == null) {
-			// maybe compile error occured
+			// maybe compile error occurred
 			logger.println("regression reporter doesn't run because test doesn\'t run.");
 			return true;
 		}
