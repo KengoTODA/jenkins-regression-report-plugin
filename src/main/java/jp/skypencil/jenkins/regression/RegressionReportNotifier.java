@@ -46,6 +46,7 @@ public final class RegressionReportNotifier extends Notifier {
 		this.recipients = recipients;
 	}
 
+	@Override
 	public BuildStepMonitor getRequiredMonitorService() {
 		return BuildStepMonitor.NONE;
 	}
