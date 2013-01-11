@@ -64,6 +64,13 @@
 					</rulesets>
 				</configuration>
 			</plugin>
+			<plugin>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
