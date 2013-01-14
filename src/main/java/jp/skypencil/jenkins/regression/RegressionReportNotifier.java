@@ -37,6 +37,7 @@ import jenkins.model.Jenkins;
 import org.kohsuke.stapler.DataBoundConstructor;
 
 import com.google.common.annotations.VisibleForTesting;
+import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
@@ -103,7 +104,7 @@ public final class RegressionReportNotifier extends Notifier {
 
         logger.println("regression reporter starts now...");
         List<CaseResult> failedTest = testResultAction.getFailedTests();
-        List<CaseResult> regressionedTests = filterRegressions(failedTest);
+        List<CaseResult> regressionedTests = Lists.newArrayList(Iterables.filter(failedTest, new RegressionPredicate()));
 
         writeToConsole(regressionedTests, listener);
         try {
@@ -209,19 +210,6 @@ public final class RegressionReportNotifier extends Notifier {
         }
 
         return list;
-    }
-
-    @VisibleForTesting
-    List<CaseResult> filterRegressions(List<CaseResult> fails) {
-        List<CaseResult> filtered = Lists.newArrayList();
-
-        for (CaseResult result : fails) {
-            if (result.getStatus().isRegression()) {
-                filtered.add(result);
-            }
-        }
-
-        return filtered;
     }
 
     @Extension
