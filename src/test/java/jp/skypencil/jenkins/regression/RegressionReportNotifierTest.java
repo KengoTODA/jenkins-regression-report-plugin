@@ -52,7 +52,7 @@ public class RegressionReportNotifierTest {
     @Test
     public void testCompileErrorOccured() throws InterruptedException,
             IOException {
-        doReturn(null).when(build).getTestResultAction();
+        doReturn(null).when(build).getAction(AbstractTestResultAction.class);
         RegressionReportNotifier notifier = new RegressionReportNotifier("",
                 false);
 
@@ -97,7 +97,7 @@ public class RegressionReportNotifierTest {
 
     private void makeRegression() {
         AbstractTestResultAction<?> result = mock(AbstractTestResultAction.class);
-        doReturn(result).when(build).getTestResultAction();
+        doReturn(result).when(build).getAction(AbstractTestResultAction.class);
         doReturn(Result.FAILURE).when(build).getResult();
         User culprit = mock(User.class);
         doReturn("culprit").when(culprit).getId();
