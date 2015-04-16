@@ -24,6 +24,8 @@ Changelog
 ### 1.1
 - send mail to culprit [#1](https://github.com/jenkinsci/regression-report-plugin/issues/1)
 
+### 1.2
+- fix #5 NoSuchMethodError
 
 Copyright and license
 ---------------------
