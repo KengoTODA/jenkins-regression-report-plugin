@@ -7,7 +7,7 @@
   </parent>
   <artifactId>regression-report-plugin</artifactId>
   <name>Regression Report Plugin</name>
-  <version>1.2</version>
+  <version>1.3-SNAPSHOT</version>
   <packaging>hpi</packaging>
   <url>http://wiki.jenkins-ci.org/display/JENKINS/Regression+Report+Plugin</url>
   <licenses>
@@ -25,6 +25,7 @@
     <connection>scm:git:git://github.com:jenkinsci/regression-report-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/regression-report-plugin.git</developerConnection>
     <url>https://github.com/jenkinsci/regression-report-plugin</url>
+    <tag>HEAD</tag>
   </scm>
   <developers>
     <developer>
