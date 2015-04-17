@@ -14,7 +14,7 @@ import hudson.scm.ChangeLogSet;
 public class ChangeLogSetMock extends ChangeLogSet<ChangeLogSet.Entry> {
 
     protected ChangeLogSetMock(AbstractBuild<?, ?> build) {
-        super(build);
+        super(build, null);
     }
 
     private final Set<Entry> set = Sets.newHashSet();
