@@ -16,6 +16,7 @@ import hudson.tasks.Publisher;
 import hudson.tasks.Mailer;
 import hudson.tasks.junit.CaseResult;
 import hudson.tasks.test.AbstractTestResultAction;
+import hudson.tasks.test.TestResult;
 
 import java.io.PrintStream;
 import java.util.Date;
@@ -33,6 +34,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 import jenkins.model.Jenkins;
+import jenkins.model.JenkinsLocationConfiguration;
 
 import org.kohsuke.stapler.DataBoundConstructor;
 
@@ -103,8 +105,7 @@ public final class RegressionReportNotifier extends Notifier {
         }
 
         logger.println("regression reporter starts now...");
-        List<CaseResult> failedTest = testResultAction.getFailedTests();
-        List<CaseResult> regressionedTests = Lists.newArrayList(Iterables.filter(failedTest, new RegressionPredicate()));
+        List<CaseResult> regressionedTests = listRegressions(testResultAction);
 
         writeToConsole(regressionedTests, listener);
         try {
@@ -115,6 +116,15 @@ public final class RegressionReportNotifier extends Notifier {
 
         logger.println("regression reporter ends.");
         return true;
+    }
+
+    private List<CaseResult> listRegressions(
+            AbstractTestResultAction<?> testResultAction) {
+        List<? extends TestResult> failedTest = testResultAction.getFailedTests();
+        Iterable<? extends TestResult> filtered = Iterables.filter(failedTest, new RegressionPredicate());
+        List<CaseResult> regressionedTests =
+                Lists.newArrayList(Iterables.transform(filtered, new TestResultToCaseResult()));
+        return regressionedTests;
     }
 
     private void writeToConsole(List<CaseResult> regressions,
@@ -147,8 +157,8 @@ public final class RegressionReportNotifier extends Notifier {
         if (Jenkins.getInstance() != null) {
             rootUrl = Jenkins.getInstance().getRootUrl();
             session = Mailer.descriptor().createSession();
-            adminAddress = new InternetAddress(Mailer.descriptor()
-                    .getAdminAddress());
+            adminAddress = new InternetAddress(
+                    JenkinsLocationConfiguration.get().getAdminAddress());
         }
         builder.append(Util.encode(rootUrl));
         builder.append(Util.encode(build.getUrl()));
