@@ -27,6 +27,9 @@ Changelog
 ### 1.2
 - fix #5 NoSuchMethodError
 
+### 1.3
+- upgrade Jenkins to the latest LTS (1.596)
+
 Copyright and license
 ---------------------
 Copyright 2015 Kengo TODA (eller86)
