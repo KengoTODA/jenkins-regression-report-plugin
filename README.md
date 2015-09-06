@@ -4,6 +4,10 @@ This plugin sends a mail if your test cases find regressions.
 
 ![built and tested on DEV@cloud](http://static-www.cloudbees.com/images/badges/BuiltOnDEV.png)
 
+A Jenkins plugin which solves one common problem to introduce CI to legacy project: a lot of failed tests hide regression (new failed bug).
+
+Legacy project may have a lot of failed tests. In this case, finding regression is little difficult. It also keeps build result unstable, so benefit of CI will be limited and project members may not pay attention on it.
+This plugin helps you to find regression even in this case. It should be helpful to introduce CI to your daily job.
 
 Scenario
 --------
