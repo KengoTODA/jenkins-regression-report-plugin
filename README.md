@@ -37,6 +37,9 @@ Changelog
 ### 1.4
 - upgrade Jenkins to the latest LTS (1.609.3)
 
+### 1.5
+- attach build log to email
+
 Copyright and license
 ---------------------
 Copyright 2012-2015 Kengo TODA (eller86)
